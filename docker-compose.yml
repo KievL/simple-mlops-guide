@@ -1,0 +1,13 @@
+services:
+  webserver:
+    build:
+      dockerfile: webserver.Dockerfile
+      context: .
+    ports:
+      - "5000:5000"
+  model:
+    build:
+      dockerfile: model_webserver.Dockerfile
+      context: .
+    ports:
+      - "5001:5000"
